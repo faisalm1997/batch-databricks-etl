@@ -37,7 +37,7 @@ batch-databricks-etl/
 ├── tests/
 │   ├── test_databricks_notebooks.py
 │   └── test_airflow_dag_integrity.py
-├── ci-cd/
+├── .github/
 │   ├── github-actions.yaml
 │   └── deploy-notebooks.yml
 ├── docs/
