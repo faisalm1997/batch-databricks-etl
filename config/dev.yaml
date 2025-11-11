@@ -1,0 +1,24 @@
+# Set environment: dev
+# Set aws_region: us-east-1
+# Define databricks section:
+  # account_id: (from Databricks setup)
+  # workspace_name: batch-etl-dev
+# Define cluster section:
+  # node_type: i3.xlarge
+  # min_workers: 1
+  # max_workers: 4
+  # spark_version: 13.3.x-scala2.12
+  # autotermination_minutes: 30
+# Define storage section:
+  # enable_versioning: true
+  # lifecycle_bronze_days: 90
+  # lifecycle_silver_days: 365
+# Define jobs section:
+  # schedule: "0 2 * * *" (daily 2 AM)
+  # timeout: 3600
+  # max_concurrent_runs: 1
+# Define unity_catalog section:
+  # enabled: false (for dev)
+# Define monitoring section:
+  # log_retention: 7
+  # enable_alarms: false (for dev)
