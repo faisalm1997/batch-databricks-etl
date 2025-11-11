@@ -1,0 +1,32 @@
+# Define workflow name: "Databricks CI/CD"
+# Set triggers: push to main/develop, pull requests
+# Define jobs:
+  # validate: Validate notebooks and Python code
+  # test: Run unit tests
+  # deploy-dev: Deploy to dev workspace
+  # deploy-prod: Deploy to prod workspace (with approval)
+# For validate job:
+  # Checkout code
+  # Set up Python
+  # Lint Python files (flake8, black)
+  # Validate Terraform syntax
+  # Check notebook syntax (with Databricks CLI)
+# For test job:
+  # Set up PySpark environment
+  # Run pytest on src/pyspark/
+  # Upload coverage report
+# For deploy-dev job:
+  # Configure AWS credentials
+  # Set up Terraform and Terragrunt
+  # Run terragrunt plan
+  # Run terragrunt apply
+  # Install Databricks CLI
+  # Configure with token from secrets
+  # Run scripts/deploy_notebooks.sh
+  # Trigger test job run
+  # Verify job succeeds
+# For deploy-prod job:
+  # Require manual approval
+  # Similar steps to deploy-dev
+  # Add Slack notification on completion
+  # Tag release on success
