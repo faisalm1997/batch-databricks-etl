@@ -1,0 +1,6 @@
+- Define local variables for environment config
+- Set common tags (Project, ManagedBy, Databricks)
+- Configure S3 remote state backend
+- Generate AWS provider with default tags
+- Generate Databricks provider (after workspace setup)
+- Point to Terraform source directory
